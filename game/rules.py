@@ -25,6 +25,12 @@ class ChessRules:
                 if board.is_enemy(nx, ny, self.color) and enemy_name == "N":
                     return True
         return False
+    def promotion(self, board, color, pos: tuple) -> list:
+        x, y, name = pos
+        enemy_name = name
+        while board.in_bounds(x,y):
+            if board.promoted = True:
+                return ['R','B','N','Q']
     # thêm các phương thức kiểm tra luật chơi ở đây nhé em
     # ví dụ như is_checkmate, is_stalemate, is_draw, can_castle, can_en_passant, can_promote ...
     # mỗi method sẽ trả về True/False hoặc các thông tin cần thiết khác
