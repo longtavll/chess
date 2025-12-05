@@ -9,6 +9,11 @@ class board:
     def get(self, x, y):
         return self.grid[x][y]
 
+    def promoted(self, name, x, y):
+        if name == 'P':
+            if y==8 or y==0:
+                return True
+
     def is_empty(self, x, y):
         return self.get(x, y) is None
 
